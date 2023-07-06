@@ -20,15 +20,15 @@ namespace search
         {
             try
             {
-                string folderPath = @"D:\GoogleSearch\";
+                string folderPath = @"D:\GoogleSearch\"; //Replace your path
                 
-                string KeywordCount = @"D:\GoogleSearch\CountKeyword\";
+                string KeywordCount = @"D:\GoogleSearch\CountKeyword\"; //Replace your path
                 Directory.CreateDirectory(folderPath);
                 Directory.CreateDirectory(KeywordCount);
                 Console.WriteLine("Enter Your Search Keyword:-");
                 string query = Console.ReadLine();
-                string apiKey = "AIzaSyCtj9-Q5SEuFA43dUmjRLU7pezJlNjwup8";
-                string cx = "551e5e1323162447f";
+                string apiKey = "AIzaSyCtj9-Q5SEuFA43dUmjRLU7pezJlNjwup8"; //replace with your api key
+                string cx = "551e5e1323162447f"; //replace with your search engine id
 
                 // Make the HTTP request to the Google Search API
                 string url = $"https://www.googleapis.com/customsearch/v1?key={apiKey}&cx={cx}&q={WebUtility.UrlEncode(query)}";
